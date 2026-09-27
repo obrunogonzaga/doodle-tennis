@@ -11,6 +11,7 @@
   "ai_evaluator_model": null,
   "ai_evaluator_version": null,
   "ai_evaluator_reasoning_effort": null,
+  "ai_evaluator_config_sha256": null,
   "started_at_utc": null,
   "finished_at_utc": null,
   "limits": {
@@ -23,6 +24,7 @@
     "cost_usd": null,
     "tokens": null
   },
+  "human_playtest_sessions": 0,
   "human_score_out_of_70": null,
   "ai_score_out_of_30": null,
   "score_out_of_100": null,

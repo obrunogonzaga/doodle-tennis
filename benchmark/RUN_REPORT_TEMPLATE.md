@@ -17,6 +17,8 @@
 | Commit final | |
 | Branch da implementação | |
 | Pasta de resultado | |
+| Status da avaliação: provisória ou final | |
+| Sessões humanas observadas | |
 
 ## Verificação técnica
 
@@ -41,7 +43,7 @@
 | 08 · Integração visual | | /12 | | /3 | |
 | **Total** | | **/70** | | **/30** | **/100** |
 
-Preencher `scores.json` com as duas avaliações independentes e gerar `score-summary.json` com `python3 benchmark/score.py benchmark/results/<run-id>/scores.json > benchmark/results/<run-id>/score-summary.json`. Registrar se a nota é provisória por falta das três sessões humanas.
+Preencher `scores.json` com as duas avaliações independentes e gerar `score-summary.json` com `python3 benchmark/finalize_result.py <run-id>`. Registrar se a nota é provisória por falta das três sessões humanas.
 
 ## Teste de jogo
 

@@ -9,6 +9,7 @@ Comparar como diferentes modelos implementam **o mesmo jogo**, a partir do mesmo
 - [PRD](./PRD.md) e [imagem conceitual](./rabisco-tennis-conceito.png).
 - Tarefas versionadas em [`benchmark/tasks`](./benchmark/tasks/). As tarefas 01–08 são o escopo de implementação; a 09 descreve a validação feita pelo avaliador.
 - [Prompt comum](./benchmark/PROMPT.md), [rubrica híbrida](./benchmark/EVALUATION.md), [prompt da IA avaliadora](./benchmark/AI_EVALUATOR_PROMPT.md) e [modelo de relatório](./benchmark/RUN_REPORT_TEMPLATE.md).
+- [Fluxo de registro e publicação](./benchmark/RESULT_WORKFLOW.md) para iniciar o avaliador, guardar evidências e calcular notas.
 - **Baseline atual:** tag Git `benchmark-v2`. Usar o commit apontado pela tag, nunca a ponta mutável de `main` nem o texto atual das issues como entrada canônica. `benchmark-v1` permanece como registro histórico da rubrica anterior.
 
 As issues do GitHub continuam úteis para discussão e acompanhamento, mas podem mudar depois de uma rodada. Em caso de divergência, prevalecem os arquivos da tag usada na rodada.
@@ -47,6 +48,8 @@ Não conceder recursos de criação de arte ou bibliotecas especiais a apenas um
 ## Avaliação
 
 Usar a [rubrica](./benchmark/EVALUATION.md) antes de ver os resultados. O humano pontua a experiência de jogo (70 pontos) e uma IA avaliadora separada pontua verificações técnicas (30 pontos). Usar a mesma IA, configuração, prompt e ferramentas para todas as runs. Ambos recebem só o ID anônimo e registram as notas independentemente antes de ver a nota do outro. A tarefa 09 organiza os playtests e a publicação; ela não soma pontos por si só.
+
+Para a rodada v2, a [configuração da IA avaliadora](./benchmark/EVALUATOR_CONFIG.json) está fixada em **`gpt-6-sol` com reasoning `high`** (“Sol 6 Alto”). Registrar a versão interna mais específica somente se a plataforma a informar; caso contrário, manter `model_version` como `null` e registrar data e configuração usada. A IA avaliadora é iniciada em uma conversa ou processo separado de cada candidato, recebendo o [prompt fixo da tag v2](./benchmark/AI_EVALUATOR_PROMPT.md) e um checkout anônimo. O repositório não aciona esse modelo automaticamente.
 
 Uma rodada só deve comparar resultados gerados do mesmo baseline e sob condições equivalentes. Se o PRD, as tarefas, o prompt do candidato ou a rubrica mudarem, criar outra tag e registrar uma nova versão do benchmark. As notas da v1 e da v2 não devem ser misturadas.
 

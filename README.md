@@ -8,6 +8,7 @@ Protótipo de tênis de arcade no navegador, inspirado em desenhos feitos num ca
 - [Imagem conceitual](./rabisco-tennis-conceito.png): referência visual do jogo.
 - [Protocolo de benchmark](./BENCHMARK.md): entrada comum, execução isolada e avaliação dos modelos.
 - [Resultados do benchmark](./benchmark/results/README.md): índice das execuções avaliadas.
+- [Como registrar uma avaliação](./benchmark/RESULT_WORKFLOW.md): IA fixa, notas humanas, evidências e publicação.
 
 O código do jogo será desenvolvido em Phaser, TypeScript e Vite. A primeira versão terá uma partida curta contra o computador, com movimento lateral, rebatida por tempo de acerto e pontuação simplificada.
 
