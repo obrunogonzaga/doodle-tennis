@@ -1,0 +1,33 @@
+{
+  "run_id": "run-001",
+  "benchmark_tag": "benchmark-v4",
+  "baseline_commit": "f25b8a2982064803fa87fd91f0da4533261db9e3",
+  "candidate_branch": "runs/run-001",
+  "candidate_commit": "ac885f717d5c3e8673dffcc96741509cd7fe77be",
+  "model": null,
+  "model_version": null,
+  "reasoning_effort": null,
+  "agent_harness": null,
+  "ai_evaluator_model": "gpt-6-sol",
+  "ai_evaluator_version": null,
+  "ai_evaluator_reasoning_effort": "high",
+  "ai_evaluator_config_sha256": "7f7c9ebc952e5fa5914e4ad3dfc28af0c86c84d389e325932150914e11c1775c",
+  "started_at_utc": null,
+  "finished_at_utc": null,
+  "limits": {
+    "wall_clock_minutes": null,
+    "max_cost_usd": null,
+    "max_tokens": null
+  },
+  "usage": {
+    "wall_clock_minutes": null,
+    "cost_usd": null,
+    "tokens": null
+  },
+  "human_playtest_sessions": 0,
+  "human_score_out_of_70": 46.0,
+  "ai_score_out_of_30": 30.0,
+  "score_out_of_100": 76.0,
+  "evaluation_status": "provisional",
+  "status": "evaluated"
+}

@@ -1,0 +1,49 @@
+{
+  "run_id": "run-001",
+  "benchmark_tag": "benchmark-v4",
+  "human_out_of_70": 46.0,
+  "ai_out_of_30": 30.0,
+  "total_out_of_100": 76.0,
+  "per_task": {
+    "01": {
+      "human": 0.0,
+      "ai": 10.0,
+      "total": 10.0
+    },
+    "02": {
+      "human": 4.0,
+      "ai": 2.0,
+      "total": 6.0
+    },
+    "03": {
+      "human": 5.5,
+      "ai": 4.0,
+      "total": 9.5
+    },
+    "04": {
+      "human": 9.75,
+      "ai": 2.0,
+      "total": 11.75
+    },
+    "05": {
+      "human": 4.0,
+      "ai": 2.0,
+      "total": 6.0
+    },
+    "06": {
+      "human": 5.5,
+      "ai": 4.0,
+      "total": 9.5
+    },
+    "07": {
+      "human": 5.25,
+      "ai": 3.0,
+      "total": 8.25
+    },
+    "08": {
+      "human": 12.0,
+      "ai": 3.0,
+      "total": 15.0
+    }
+  }
+}

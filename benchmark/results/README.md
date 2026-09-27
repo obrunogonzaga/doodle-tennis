@@ -4,7 +4,9 @@ Cada linha representa uma execução independente a partir da mesma tag de basel
 
 | ID | Baseline | Código entregue | Relatório | Modelo | Reasoning | Humano /70 | IA /30 | Total /100 | Status | Tempo | Custo |
 | --- | --- | --- | --- | --- | --- | ---: | ---: | ---: | --- | ---: | ---: |
-| _Nenhuma execução avaliada ainda_ | | | | | | | | | | | |
+| `run-001` | `benchmark-v4` | `ac885f7` (`runs/run-001`) | [Relatório](./run-001/report.md) | A revelar | A revelar | 46 | 30 | **76** | Provisório | Não informado | Não informado |
+
+A `run-001` tem menos de três sessões humanas observadas e divergências entre as avaliações ainda pendentes. O código candidato permanece na branch local; o commit está identificado nos [metadados](./run-001/metadata.json). A identidade do modelo candidato será revelada após a rodada.
 
 ## Estrutura de uma execução
 
