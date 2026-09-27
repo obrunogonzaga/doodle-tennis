@@ -14,3 +14,19 @@ O código do jogo será desenvolvido em Phaser, TypeScript e Vite. A primeira ve
 ## Estado
 
 Planejamento concluído. A implementação será acompanhada pelas issues do repositório. As especificações congeladas para comparação entre modelos ficam em [`benchmark/tasks`](./benchmark/tasks/).
+
+## Como convidar um modelo para o benchmark
+
+Escolha um ID para a execução e prepare uma cópia isolada. Por exemplo, para `run-001`, execute **fora da pasta deste repositório**, em um diretório que ainda não contenha `rabisco-run-001`:
+
+```bash
+git clone https://github.com/obrunogonzaga/rabisco-tennis.git rabisco-run-001
+cd rabisco-run-001
+git switch -c runs/run-001 benchmark-v1
+```
+
+Abra o modelo de programação **nessa cópia** e envie a mensagem abaixo. Os limites de 2 horas e US$ 20 são apenas um exemplo; escolha os limites da rodada antes de começar e aplique os mesmos a todos os modelos.
+
+> Você é o candidato `run-001` do benchmark Rabisco Tênis. Leia e execute integralmente `benchmark/PROMPT.md`. Sua entrada é a tag `benchmark-v1`. Você tem uma tentativa. Os limites desta rodada são 2 horas ou US$ 20 de uso, o que ocorrer primeiro. Trabalhe somente neste checkout, não consulte soluções de outros candidatos e não faça push. Ao terminar, faça um commit local e informe o SHA, as verificações executadas e as limitações conhecidas.
+
+Quem organiza a rodada controla o tempo e o gasto; não dependa do modelo para medir o custo. Para o próximo candidato, crie outra cópia **da mesma tag** e troque apenas o ID (`run-002`, `run-003`...). Mantenha as implementações separadas até todas terminarem. Depois, avalie pela [rubrica](./benchmark/EVALUATION.md) e publique o código e o relatório conforme o [protocolo](./BENCHMARK.md).
