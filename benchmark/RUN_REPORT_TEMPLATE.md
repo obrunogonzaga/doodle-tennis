@@ -4,9 +4,10 @@
 
 | Campo | Valor |
 | --- | --- |
-| Baseline Git (`benchmark-v1`) | |
+| Baseline Git (`benchmark-v2`) | |
 | Modelo e versão exata | |
 | Configuração de reasoning | |
+| IA avaliadora, versão e reasoning | |
 | Agente / configuração | |
 | Ferramentas e acesso à rede | |
 | Tempo e orçamento permitidos | |
@@ -26,19 +27,21 @@
 | `npm run build` | |
 | Erros de console ou falhas bloqueantes | |
 
-## Pontuação
+## Pontuação independente
 
-| Tarefa | Nota 0–4 | Pontos ponderados | Evidência ou falha |
-| --- | ---: | ---: | --- |
-| 01 · Projeto | | /10 | |
-| 02 · Quadra e movimento | | /10 | |
-| 03 · Bola e ponto | | /15 | |
-| 04 · Rebatida | | /15 | |
-| 05 · Adversário | | /10 | |
-| 06 · Partida e telas | | /15 | |
-| 07 · Arte em camadas | | /10 | |
-| 08 · Integração visual | | /15 | |
-| **Total** | | **/100** | |
+| Tarefa | Humano 0–4 | Pontos humanos | IA 0–4 | Pontos IA | Evidência ou falha |
+| --- | ---: | ---: | ---: | ---: | --- |
+| 01 · Projeto | — | — | | /10 | |
+| 02 · Quadra e movimento | | /8 | | /2 | |
+| 03 · Bola e ponto | | /11 | | /4 | |
+| 04 · Rebatida | | /13 | | /2 | |
+| 05 · Adversário | | /8 | | /2 | |
+| 06 · Partida e telas | | /11 | | /4 | |
+| 07 · Arte em camadas | | /7 | | /3 | |
+| 08 · Integração visual | | /12 | | /3 | |
+| **Total** | | **/70** | | **/30** | **/100** |
+
+Preencher `scores.json` com as duas avaliações independentes e gerar `score-summary.json` com `python3 benchmark/score.py benchmark/results/<run-id>/scores.json > benchmark/results/<run-id>/score-summary.json`. Registrar se a nota é provisória por falta das três sessões humanas.
 
 ## Teste de jogo
 
@@ -50,4 +53,4 @@
 
 ## Decisão
 
-Resumo do que funcionou, limitações, ajustes sugeridos e eventual diferença nas condições desta execução. Registrar a pontuação antes de qualquer correção no código do candidato.
+Resumo do que funcionou, limitações, ajustes sugeridos, diferenças entre notas humana e da IA e eventual diferença nas condições desta execução. Registrar ambas as pontuações antes de qualquer correção no código do candidato e antes de revelar o modelo.

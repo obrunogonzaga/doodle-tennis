@@ -8,8 +8,8 @@ Comparar como diferentes modelos implementam **o mesmo jogo**, a partir do mesmo
 
 - [PRD](./PRD.md) e [imagem conceitual](./rabisco-tennis-conceito.png).
 - Tarefas versionadas em [`benchmark/tasks`](./benchmark/tasks/). As tarefas 01–08 são o escopo de implementação; a 09 descreve a validação feita pelo avaliador.
-- [Prompt comum](./benchmark/PROMPT.md), [rubrica de avaliação](./benchmark/EVALUATION.md) e [modelo de relatório](./benchmark/RUN_REPORT_TEMPLATE.md).
-- **Baseline v1:** tag Git `benchmark-v1`. Usar o commit apontado pela tag, nunca a ponta mutável de `main` nem o texto atual das issues como entrada canônica.
+- [Prompt comum](./benchmark/PROMPT.md), [rubrica híbrida](./benchmark/EVALUATION.md), [prompt da IA avaliadora](./benchmark/AI_EVALUATOR_PROMPT.md) e [modelo de relatório](./benchmark/RUN_REPORT_TEMPLATE.md).
+- **Baseline atual:** tag Git `benchmark-v2`. Usar o commit apontado pela tag, nunca a ponta mutável de `main` nem o texto atual das issues como entrada canônica. `benchmark-v1` permanece como registro histórico da rubrica anterior.
 
 As issues do GitHub continuam úteis para discussão e acompanhamento, mas podem mudar depois de uma rodada. Em caso de divergência, prevalecem os arquivos da tag usada na rodada.
 
@@ -17,8 +17,8 @@ As issues do GitHub continuam úteis para discussão e acompanhamento, mas podem
 
 O repositório tem dois tipos de saída, guardados separadamente:
 
-1. **Código do jogo:** cada candidato trabalha numa cópia isolada da tag `benchmark-v1`. Depois que todas as execuções da rodada terminarem, publicar a versão final em uma branch `runs/run-001`, `runs/run-002` etc. Cada branch contém o código completo daquele candidato e seu commit final; nenhuma implementação entra em `main` durante a comparação.
-2. **Avaliação:** guardar em `benchmark/results/run-001/`, `benchmark/results/run-002/` etc. na branch `main`. Cada pasta contém `metadata.json`, `report.md` e, quando produzidas, capturas em `screenshots/`. O [índice de resultados](./benchmark/results/README.md) liga a pasta ao commit de código. Usar o [modelo de metadados](./benchmark/RUN_METADATA_TEMPLATE.json) e o [modelo de relatório](./benchmark/RUN_REPORT_TEMPLATE.md).
+1. **Código do jogo:** cada candidato trabalha numa cópia isolada da tag `benchmark-v2`. Depois que todas as execuções da rodada terminarem, publicar a versão final em uma branch `runs/run-001`, `runs/run-002` etc. Cada branch contém o código completo daquele candidato e seu commit final; nenhuma implementação entra em `main` durante a comparação.
+2. **Avaliação:** guardar em `benchmark/results/run-001/`, `benchmark/results/run-002/` etc. na branch `main`. Cada pasta contém `metadata.json`, `scores.json`, `report.md` e, quando produzidas, capturas em `screenshots/`. O [índice de resultados](./benchmark/results/README.md) liga a pasta ao commit de código. Usar os modelos de [metadados](./benchmark/RUN_METADATA_TEMPLATE.json), [notas](./benchmark/SCORE_TEMPLATE.json) e [relatório](./benchmark/RUN_REPORT_TEMPLATE.md).
 
 Antes de iniciar uma execução, atribuir um ID anônimo (`run-001`, por exemplo) e registrá-lo com modelo, versão e reasoning em `benchmark/run-map.private.csv`. Criar esse arquivo local a partir do [modelo de mapeamento](./benchmark/RUN_MAP_TEMPLATE.csv); ele é ignorado pelo Git e não deve ser enviado ao candidato nem ao avaliador que fará a pontuação cega. Registrar no mesmo arquivo o commit final quando a execução terminar.
 
@@ -28,7 +28,7 @@ O build `dist/` é reproduzível a partir da branch e não precisa ser versionad
 
 ## Preparação de cada execução
 
-1. Criar uma cópia de trabalho independente a partir de `benchmark-v1`, sem alterações de outro candidato. Pode ser um clone ou uma branch isolada iniciada no commit da tag.
+1. Criar uma cópia de trabalho independente a partir de `benchmark-v2`, sem alterações de outro candidato. Pode ser um clone ou uma branch isolada iniciada no commit da tag.
 2. Fornecer ao modelo o mesmo prompt de [`benchmark/PROMPT.md`](./benchmark/PROMPT.md), o PRD, a imagem e as tarefas 01–08. A tarefa 09 não deve ser atribuída ao candidato.
 3. Manter iguais, dentro da mesma rodada: ferramentas disponíveis, acesso à rede, tempo máximo, orçamento de tokens/custo, máquina, versão de Node e navegador. Se alguma dessas condições diferir, registrar a diferença e não tratar os resultados como comparação controlada.
 4. Impedir que uma execução leia código, conversa, screenshots ou avaliações de outra antes de terminar.
@@ -46,9 +46,9 @@ Não conceder recursos de criação de arte ou bibliotecas especiais a apenas um
 
 ## Avaliação
 
-Usar a [rubrica](./benchmark/EVALUATION.md) antes de ver os resultados. A mesma pessoa ou equipe avalia todos os candidatos, preferencialmente sem saber qual modelo produziu cada versão. Executar a checagem técnica e a mesma sequência de jogo em viewport 1536 × 1024. A tarefa 09 registra os playtests e ajustes como atividade do avaliador; ela não soma pontos por si só.
+Usar a [rubrica](./benchmark/EVALUATION.md) antes de ver os resultados. O humano pontua a experiência de jogo (70 pontos) e uma IA avaliadora separada pontua verificações técnicas (30 pontos). Usar a mesma IA, configuração, prompt e ferramentas para todas as runs. Ambos recebem só o ID anônimo e registram as notas independentemente antes de ver a nota do outro. A tarefa 09 organiza os playtests e a publicação; ela não soma pontos por si só.
 
-Uma rodada só deve comparar resultados gerados do mesmo baseline e sob condições equivalentes. Se o PRD, as tarefas ou a rubrica mudarem, criar outra tag e registrar uma nova versão do benchmark.
+Uma rodada só deve comparar resultados gerados do mesmo baseline e sob condições equivalentes. Se o PRD, as tarefas, o prompt do candidato ou a rubrica mudarem, criar outra tag e registrar uma nova versão do benchmark. As notas da v1 e da v2 não devem ser misturadas.
 
 ## Relação com os recursos do GitHub
 

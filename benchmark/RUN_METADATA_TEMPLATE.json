@@ -1,13 +1,16 @@
 {
   "run_id": "run-001",
-  "benchmark_tag": "benchmark-v1",
-  "baseline_commit": "c3b4d8d4353a8217f50b16de1c7539c2623e86e2",
+  "benchmark_tag": "benchmark-v2",
+  "baseline_commit": null,
   "candidate_branch": "runs/run-001",
   "candidate_commit": null,
   "model": null,
   "model_version": null,
   "reasoning_effort": null,
   "agent_harness": null,
+  "ai_evaluator_model": null,
+  "ai_evaluator_version": null,
+  "ai_evaluator_reasoning_effort": null,
   "started_at_utc": null,
   "finished_at_utc": null,
   "limits": {
@@ -20,6 +23,9 @@
     "cost_usd": null,
     "tokens": null
   },
+  "human_score_out_of_70": null,
+  "ai_score_out_of_30": null,
   "score_out_of_100": null,
+  "evaluation_status": "pending",
   "status": "pending"
 }
