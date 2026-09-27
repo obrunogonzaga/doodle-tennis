@@ -1,7 +1,7 @@
 # PRD — Rabisco Tênis
 
 **Status:** proposta para o primeiro protótipo jogável  
-**Referência visual:** [rabisco-tennis-conceito.png](./rabisco-tennis-conceito.png)  
+**Referências visuais:** [conceito original](./rabisco-tennis-conceito.png), [quadra vazia](./references/quadra-vazia.png) e [personagens/interface](./references/personagens-interface.png)<br>
 **Plataforma inicial:** navegador em computador, com teclado
 
 ## 1. Visão do produto
@@ -87,7 +87,7 @@ O adversário deve se mover em direção à previsão de quique com pequeno atra
 - Placar em recorte de papel preso por fita, inspirado no topo da referência.
 - Anotações e pequenos desenhos nas margens como decoração fora da área principal de jogo.
 
-A imagem conceitual não deve ser usada inteira como campo jogável: ela já contém bola, personagens, placar e trajetória estáticos. O protótipo usará esses elementos como guia para criar camadas separadas. A quadra e os personagens podem ser redesenhados como SVGs ou imagens transparentes; a textura do papel pode vir de um recorte tratado da referência, se funcionar sem elementos estáticos indesejados.
+A [imagem conceitual](./rabisco-tennis-conceito.png) mostra a composição desejada, mas não deve ser usada inteira como campo jogável: ela já contém bola, personagens, placar e trajetória estáticos. A [quadra vazia](./references/quadra-vazia.png) detalha o cenário sem esses elementos; a [prancha de personagens e interface](./references/personagens-interface.png) orienta poses, paleta e recortes de papel. As imagens são referências visuais, não recursos finais obrigatórios. O protótipo usará esses elementos como guia para criar camadas separadas. A quadra e os personagens podem ser redesenhados como SVGs ou imagens transparentes; a textura do papel pode vir de um recorte tratado das referências, se funcionar sem elementos estáticos indesejados. Veja também as [notas das referências](./references/README.md).
 
 Animações discretas de traço e pequenas imperfeições devem sugerir desenho manual sem deslocar os limites reais da quadra. Um som curto para golpe, quique e ponto pode entrar após a jogabilidade e a clareza visual estarem validadas.
 

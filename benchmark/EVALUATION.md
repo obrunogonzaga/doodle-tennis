@@ -1,4 +1,4 @@
-# Rubrica de avaliação — benchmark v2
+# Rubrica de avaliação — benchmark v3
 
 ## Composição da nota
 
@@ -28,7 +28,7 @@ Os pesos são fixados em [`WEIGHTS.json`](./WEIGHTS.json). Cada avaliador atribu
 
 ## Roteiro da IA avaliadora
 
-1. Receber apenas o ID e o checkout anônimo do candidato. Ler PRD, tarefas, rubrica e [prompt de avaliação](./AI_EVALUATOR_PROMPT.md) numa cópia limpa da tag `benchmark-v2`, nunca na cópia potencialmente alterada pelo candidato. Não receber o mapeamento privado, notas humanas ou soluções anteriores.
+1. Receber apenas o ID e o checkout anônimo do candidato. Ler PRD, tarefas, rubrica e [prompt de avaliação](./AI_EVALUATOR_PROMPT.md) numa cópia limpa da tag `benchmark-v3`, nunca na cópia potencialmente alterada pelo candidato. Não receber o mapeamento privado, notas humanas ou soluções anteriores.
 2. Em ambiente limpo, executar instalação, `npm run dev` e `npm run build`; registrar comandos, erros e logs relevantes. Usar o mesmo navegador e viewport do roteiro humano quando testar a interface.
 3. Examinar código e comportamento para atribuir somente as notas da coluna IA. Não inferir que uma função existe apenas porque o README diz que existe.
 4. Entregar notas de 0 a 4 para as oito tarefas, com evidência verificável para cada uma. Não editar o código do candidato e não atribuir notas humanas.

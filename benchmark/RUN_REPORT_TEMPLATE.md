@@ -4,7 +4,7 @@
 
 | Campo | Valor |
 | --- | --- |
-| Baseline Git (`benchmark-v2`) | |
+| Baseline Git (`benchmark-v3`) | |
 | Modelo e versão exata | |
 | Configuração de reasoning | |
 | IA avaliadora, versão e reasoning | |

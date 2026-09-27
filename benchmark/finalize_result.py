@@ -30,7 +30,7 @@ def main() -> int:
         evaluator_bytes = (BENCHMARK / "EVALUATOR_CONFIG.json").read_bytes()
         evaluator = json.loads(evaluator_bytes)
         baseline = subprocess.run(
-            ["git", "rev-parse", "benchmark-v2^{}"],
+            ["git", "rev-parse", "benchmark-v3^{}"],
             cwd=ROOT, check=True, capture_output=True, text=True,
         ).stdout.strip()
 
@@ -39,7 +39,7 @@ def main() -> int:
         if len({metadata["benchmark_tag"], scores["benchmark_tag"], evaluator["benchmark_tag"]}) != 1:
             raise ValueError("benchmark tags differ")
         if metadata["baseline_commit"] != baseline:
-            raise ValueError("baseline commit differs from benchmark-v2")
+            raise ValueError("baseline commit differs from benchmark-v3")
         if metadata["candidate_branch"] != f"runs/{run_id}":
             raise ValueError("candidate branch does not match run ID")
         if not re.fullmatch(r"[0-9a-f]{40}", metadata.get("candidate_commit") or ""):
@@ -58,11 +58,11 @@ def main() -> int:
             raise ValueError("human_playtest_sessions must be a nonnegative integer")
 
         frozen_weights = subprocess.run(
-            ["git", "show", "benchmark-v2:benchmark/WEIGHTS.json"],
+            ["git", "show", "benchmark-v3:benchmark/WEIGHTS.json"],
             cwd=ROOT, check=True, capture_output=True,
         ).stdout
         if (BENCHMARK / "WEIGHTS.json").read_bytes() != frozen_weights:
-            raise ValueError("local weights differ from the frozen benchmark-v2 tag")
+            raise ValueError("local weights differ from the frozen benchmark-v3 tag")
 
         for template_name, output_name in (
             ("AI_ASSESSMENT_TEMPLATE.md", "ai-assessment.md"),

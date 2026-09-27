@@ -1,6 +1,6 @@
 {
   "run_id": "run-001",
-  "benchmark_tag": "benchmark-v2",
+  "benchmark_tag": "benchmark-v3",
   "baseline_commit": null,
   "candidate_branch": "runs/run-001",
   "candidate_commit": null,
