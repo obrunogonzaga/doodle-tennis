@@ -1,6 +1,6 @@
 {
   "run_id": "run-001",
-  "benchmark_tag": "benchmark-v3",
+  "benchmark_tag": "benchmark-v4",
   "human": {"02": null, "03": null, "04": null, "05": null, "06": null, "07": null, "08": null},
   "ai": {"01": null, "02": null, "03": null, "04": null, "05": null, "06": null, "07": null, "08": null}
 }

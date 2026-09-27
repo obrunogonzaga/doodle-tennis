@@ -1,6 +1,6 @@
 # Avaliação humana — <run-id>
 
-**Rubrica:** `benchmark-v3`<br>
+**Rubrica:** `benchmark-v4`<br>
 **Identidade do candidato:** oculta até fechar as notas
 
 Pontuar a experiência de jogo sem consultar a nota da IA. Usar o mesmo navegador, viewport e roteiro para todas as runs.

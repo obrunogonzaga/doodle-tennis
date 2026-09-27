@@ -1,5 +1,5 @@
 {
-  "benchmark_tag": "benchmark-v3",
+  "benchmark_tag": "benchmark-v4",
   "model": "gpt-6-sol",
   "model_version": null,
   "reasoning_effort": "high",

@@ -1,18 +1,18 @@
-# PRD — Rabisco Tênis
+# PRD — Doodle Tênis
 
 **Status:** proposta para o primeiro protótipo jogável  
-**Referências visuais:** [conceito original](./rabisco-tennis-conceito.png), [quadra vazia](./references/quadra-vazia.png) e [personagens/interface](./references/personagens-interface.png)<br>
+**Referências visuais:** [conceito principal](./doodle-tennis-conceito.png), [quadra vazia](./references/quadra-vazia.png) e [personagens/interface](./references/personagens-interface.png)<br>
 **Plataforma inicial:** navegador em computador, com teclado
 
 ## 1. Visão do produto
 
-Rabisco Tênis é um jogo curto de tênis de arcade que parece acontecer dentro de um caderno. O jogador controla a personagem mais próxima da câmera, troca bolas com um adversário simples e tenta vencer uma partida. Movimento, trajetória e resultado de cada golpe devem ser fáceis de entender, enquanto o cenário preserva o caráter artesanal da imagem conceitual.
+Doodle Tênis é um jogo curto de tênis de arcade que parece acontecer dentro de um caderno. O jogador controla a personagem mais próxima da câmera, troca bolas com um adversário simples e tenta vencer uma partida. Movimento, trajetória e resultado de cada golpe devem ser fáceis de entender, enquanto o cenário preserva o caráter artesanal da imagem conceitual.
 
 O primeiro lançamento é um **protótipo para testar a diversão da troca de bolas e a legibilidade da estética**. Uma partida deve durar aproximadamente 2 a 4 minutos.
 
 ### Hipótese a validar
 
-Controles de movimento lateral e rebatida por tempo de acerto, combinados com uma apresentação de papel e rabiscos, produzem uma experiência divertida e compreensível já na primeira partida.
+Controles de movimento lateral e rebatida por tempo de acerto, combinados com uma apresentação de papel e desenhos à mão, produzem uma experiência divertida e compreensível já na primeira partida.
 
 ### Público inicial
 
@@ -87,7 +87,7 @@ O adversário deve se mover em direção à previsão de quique com pequeno atra
 - Placar em recorte de papel preso por fita, inspirado no topo da referência.
 - Anotações e pequenos desenhos nas margens como decoração fora da área principal de jogo.
 
-A [imagem conceitual](./rabisco-tennis-conceito.png) mostra a composição desejada, mas não deve ser usada inteira como campo jogável: ela já contém bola, personagens, placar e trajetória estáticos. A [quadra vazia](./references/quadra-vazia.png) detalha o cenário sem esses elementos; a [prancha de personagens e interface](./references/personagens-interface.png) orienta poses, paleta e recortes de papel. As imagens são referências visuais, não recursos finais obrigatórios. O protótipo usará esses elementos como guia para criar camadas separadas. A quadra e os personagens podem ser redesenhados como SVGs ou imagens transparentes; a textura do papel pode vir de um recorte tratado das referências, se funcionar sem elementos estáticos indesejados. Veja também as [notas das referências](./references/README.md).
+A [imagem conceitual](./doodle-tennis-conceito.png) mostra a composição desejada, mas não deve ser usada inteira como campo jogável: ela já contém bola, personagens, placar e trajetória estáticos. A [quadra vazia](./references/quadra-vazia.png) detalha o cenário sem esses elementos; a [prancha de personagens e interface](./references/personagens-interface.png) orienta poses, paleta e recortes de papel. As imagens são referências visuais, não recursos finais obrigatórios. O protótipo usará esses elementos como guia para criar camadas separadas. A quadra e os personagens podem ser redesenhados como SVGs ou imagens transparentes; a textura do papel pode vir de um recorte tratado das referências, se funcionar sem elementos estáticos indesejados. Veja também as [notas das referências](./references/README.md).
 
 Animações discretas de traço e pequenas imperfeições devem sugerir desenho manual sem deslocar os limites reais da quadra. Um som curto para golpe, quique e ponto pode entrar após a jogabilidade e a clareza visual estarem validadas.
 

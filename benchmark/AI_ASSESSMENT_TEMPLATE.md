@@ -1,6 +1,6 @@
 # Avaliação técnica da IA — <run-id>
 
-**Rubrica:** `benchmark-v3`<br>
+**Rubrica:** `benchmark-v4`<br>
 **Identidade do candidato:** oculta até fechar as notas  
 **Modelo avaliador, versão e reasoning:** registrar no `metadata.json`
 

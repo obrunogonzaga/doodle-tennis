@@ -1,4 +1,4 @@
-"""Calculate the benchmark v3 human and AI weighted scores."""
+"""Calculate the benchmark v4 human and AI weighted scores."""
 
 import json
 import sys

@@ -1,10 +1,10 @@
-# Referências visuais da rodada v3
+# Referências visuais da rodada v4
 
 As três imagens abaixo são entradas visuais comuns para todos os candidatos. Elas definem a direção de arte, mas não substituem os critérios do [PRD](../PRD.md) nem são sprites ou telas finais prontos para uso.
 
 | Imagem | O que observar |
 | --- | --- |
-| [Conceito original](../rabisco-tennis-conceito.png) | Composição geral, humor de caderno, paleta e hierarquia visual. |
+| [Conceito principal](../doodle-tennis-conceito.png) | Composição geral, humor de caderno, paleta e hierarquia visual. |
 | [Quadra vazia](./quadra-vazia.png) | Perspectiva da quadra, rede, linhas, papel pautado e espaço para elementos móveis. |
 | [Personagens e interface](./personagens-interface.png) | Identidade dos dois personagens, poses de referência, bola, rastro, placar e recortes de papel da interface. |
 

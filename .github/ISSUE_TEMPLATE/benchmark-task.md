@@ -1,6 +1,6 @@
 ---
 name: Tarefa do benchmark
-about: Especificar uma tarefa reutilizável e avaliável do Rabisco Tênis
+about: Especificar uma tarefa reutilizável e avaliável do Doodle Tênis
 title: "[Benchmark] "
 labels: benchmark-task
 ---

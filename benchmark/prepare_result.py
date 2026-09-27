@@ -31,7 +31,7 @@ def main() -> int:
         return 1
 
     baseline = subprocess.run(
-        ["git", "rev-parse", "benchmark-v3^{}"],
+        ["git", "rev-parse", "benchmark-v4^{}"],
         cwd=ROOT,
         check=True,
         capture_output=True,

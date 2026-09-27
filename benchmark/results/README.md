@@ -23,4 +23,4 @@ benchmark/results/run-001/
     └── resultado.png
 ```
 
-O código completo fica na branch `runs/run-001`, iniciada na tag `benchmark-v3`. O relatório aponta para o commit final dessa branch. O modelo e a nota só são divulgados depois da avaliação cega, quando possível. O [fluxo de avaliação](../RESULT_WORKFLOW.md) explica como preparar a pasta, registrar as duas notas e calcular o resultado.
+O código completo fica na branch `runs/run-001`, iniciada na tag `benchmark-v4`. O relatório aponta para o commit final dessa branch. O modelo e a nota só são divulgados depois da avaliação cega, quando possível. O [fluxo de avaliação](../RESULT_WORKFLOW.md) explica como preparar a pasta, registrar as duas notas e calcular o resultado.
