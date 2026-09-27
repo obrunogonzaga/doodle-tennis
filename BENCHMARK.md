@@ -13,6 +13,17 @@ Comparar como diferentes modelos implementam **o mesmo jogo**, a partir do mesmo
 
 As issues do GitHub continuam úteis para discussão e acompanhamento, mas podem mudar depois de uma rodada. Em caso de divergência, prevalecem os arquivos da tag usada na rodada.
 
+## Organização e persistência dos resultados
+
+O repositório tem dois tipos de saída, guardados separadamente:
+
+1. **Código do jogo:** cada candidato trabalha numa cópia isolada da tag `benchmark-v1`. Depois que todas as execuções da rodada terminarem, publicar a versão final em uma branch `runs/run-001`, `runs/run-002` etc. Cada branch contém o código completo daquele candidato e seu commit final; nenhuma implementação entra em `main` durante a comparação.
+2. **Avaliação:** guardar em `benchmark/results/run-001/`, `benchmark/results/run-002/` etc. na branch `main`. Cada pasta contém `metadata.json`, `report.md` e, quando produzidas, capturas em `screenshots/`. O [índice de resultados](./benchmark/results/README.md) liga a pasta ao commit de código. Usar o [modelo de metadados](./benchmark/RUN_METADATA_TEMPLATE.json) e o [modelo de relatório](./benchmark/RUN_REPORT_TEMPLATE.md).
+
+Durante a rodada, usar somente IDs anônimos (`run-001`, por exemplo). Como este repositório é público, não publicar branches ou relatórios antes de todas as execuções terminarem e das notas serem registradas: os próximos candidatos poderiam ver as soluções anteriores. Manter as cópias em pastas locais isoladas ou em repositórios privados até a divulgação. Revelar o mapeamento entre ID e modelo no relatório final, depois da pontuação.
+
+O build `dist/` é reproduzível a partir da branch e não precisa ser versionado. Guardar no resultado as capturas pequenas e os logs de verificação que sustentam a nota; não incluir chaves de API ou outros segredos em logs públicos. Se uma rodada exigir vídeos ou arquivos grandes, registrar no relatório um link estável para esses artefatos.
+
 ## Preparação de cada execução
 
 1. Criar uma cópia de trabalho independente a partir de `benchmark-v1`, sem alterações de outro candidato. Pode ser um clone ou uma branch isolada iniciada no commit da tag.

@@ -1,0 +1,24 @@
+{
+  "run_id": "run-001",
+  "benchmark_tag": "benchmark-v1",
+  "baseline_commit": "c3b4d8d4353a8217f50b16de1c7539c2623e86e2",
+  "candidate_branch": "runs/run-001",
+  "candidate_commit": null,
+  "model": null,
+  "model_version": null,
+  "agent_harness": null,
+  "started_at_utc": null,
+  "finished_at_utc": null,
+  "limits": {
+    "wall_clock_minutes": null,
+    "max_cost_usd": null,
+    "max_tokens": null
+  },
+  "usage": {
+    "wall_clock_minutes": null,
+    "cost_usd": null,
+    "tokens": null
+  },
+  "score_out_of_100": null,
+  "status": "pending"
+}

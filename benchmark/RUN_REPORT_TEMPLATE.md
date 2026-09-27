@@ -13,6 +13,8 @@
 | Início e fim | |
 | Tokens / custo, se disponíveis | |
 | Commit final | |
+| Branch da implementação | |
+| Pasta de resultado | |
 
 ## Verificação técnica
 
