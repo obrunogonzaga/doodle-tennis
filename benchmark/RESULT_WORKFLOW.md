@@ -18,12 +18,26 @@ python3 benchmark/prepare_result.py run-001
 
 Isso cria `benchmark/results/run-001/` com metadados, notas vazias, modelos de avaliação humana e da IA, relatório e pasta para capturas. O script registra automaticamente o SHA da tag e a configuração fixa da IA. A pasta permanece **local e sem push** até todas as runs da rodada estarem avaliadas.
 
+Execute este comando no checkout **do organizador, na branch `main`**. A branch `runs/run-001` pertence ao candidato e não guarda avaliações. Se quiser preencher a avaliação humana em seguida, o script abaixo também cria a pasta automaticamente quando ela ainda não existe:
+
+```bash
+python3 benchmark/record_human_assessment.py run-001
+```
+
+Ele pergunta as sete notas humanas, exige uma evidência para cada uma e registra as sessões observadas. Depois de confirmar o resumo, salva `human-assessment.md`, a seção `human` de `scores.json` e `human_playtest_sessions` em `metadata.json`. Não mostra nem altera as notas da IA. Se a avaliação humana já foi preenchida, o script não a sobrescreve.
+
+Se fizer mais playtests depois, acrescente as sessões sem alterar as notas já registradas:
+
+```bash
+python3 benchmark/record_human_assessment.py run-001 --add-sessions
+```
+
 Quando o candidato terminar, registrar o SHA completo de seu commit em `metadata.json` e no mapeamento privado. Registrar também horário, limites e uso real quando disponíveis.
 
 ## Avaliações independentes
 
 1. **IA:** abrir uma conversa ou processo separado com `gpt-6-sol` e reasoning `high`. Fornecer o ID da run, o checkout anônimo do candidato e os arquivos de especificação de uma cópia limpa da tag `benchmark-v4`. Enviar o conteúdo de [`AI_EVALUATOR_PROMPT.md`](./AI_EVALUATOR_PROMPT.md) daquela tag. Não enviar identidade do candidato, mapeamento privado ou notas humanas. Salvar a resposta com notas e evidências em `ai-assessment.md`; transcrever as oito notas para a seção `ai` de `scores.json`.
-2. **Humano:** jogar com o roteiro da [rubrica](./EVALUATION.md), sem ver a avaliação da IA, e preencher `human-assessment.md`. Transcrever as sete notas para a seção `human` de `scores.json` e o número de sessões observadas para `human_playtest_sessions` em `metadata.json`. Guardar capturas em `screenshots/` e um trecho de log limpo em `build.txt` somente se ele sustentar alguma conclusão.
+2. **Humano:** jogar com o roteiro da [rubrica](./EVALUATION.md), sem ver a avaliação da IA, e executar [`record_human_assessment.py`](./record_human_assessment.py). O script preenche `human-assessment.md`, as sete notas na seção `human` de `scores.json` e o número de sessões observadas em `metadata.json`. Guardar capturas em `screenshots/` e um trecho de log limpo em `build.txt` somente se ele sustentar alguma conclusão.
 3. Verificar que cada nota de 0 a 4 tem evidência correspondente nos arquivos de avaliação. Resolver divergências de 2 pontos ou mais segundo a rubrica, mantendo registro da nota original e da eventual revisão.
 
 Mensagem de abertura para a IA avaliadora, trocando apenas o ID e os caminhos:
