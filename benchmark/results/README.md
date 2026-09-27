@@ -2,9 +2,9 @@
 
 Cada linha representa uma execução independente a partir da mesma tag de baseline. Os resultados só são publicados depois que todas as execuções da rodada terminarem e forem pontuadas.
 
-| ID | Baseline | Código entregue | Relatório | Modelo | Nota /100 | Tempo | Custo |
-| --- | --- | --- | --- | --- | ---: | ---: | ---: |
-| _Nenhuma execução avaliada ainda_ | | | | | | | |
+| ID | Baseline | Código entregue | Relatório | Modelo | Reasoning | Nota /100 | Tempo | Custo |
+| --- | --- | --- | --- | --- | --- | ---: | ---: | ---: |
+| _Nenhuma execução avaliada ainda_ | | | | | | | | |
 
 ## Estrutura de uma execução
 
