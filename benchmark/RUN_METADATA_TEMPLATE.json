@@ -6,6 +6,7 @@
   "candidate_commit": null,
   "model": null,
   "model_version": null,
+  "reasoning_effort": null,
   "agent_harness": null,
   "started_at_utc": null,
   "finished_at_utc": null,

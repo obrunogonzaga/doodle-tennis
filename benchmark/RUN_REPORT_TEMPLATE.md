@@ -6,6 +6,7 @@
 | --- | --- |
 | Baseline Git (`benchmark-v1`) | |
 | Modelo e versão exata | |
+| Configuração de reasoning | |
 | Agente / configuração | |
 | Ferramentas e acesso à rede | |
 | Tempo e orçamento permitidos | |

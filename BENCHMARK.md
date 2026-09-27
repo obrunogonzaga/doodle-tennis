@@ -30,7 +30,7 @@ O build `dist/` é reproduzível a partir da branch e não precisa ser versionad
 2. Fornecer ao modelo o mesmo prompt de [`benchmark/PROMPT.md`](./benchmark/PROMPT.md), o PRD, a imagem e as tarefas 01–08. A tarefa 09 não deve ser atribuída ao candidato.
 3. Manter iguais, dentro da mesma rodada: ferramentas disponíveis, acesso à rede, tempo máximo, orçamento de tokens/custo, máquina, versão de Node e navegador. Se alguma dessas condições diferir, registrar a diferença e não tratar os resultados como comparação controlada.
 4. Impedir que uma execução leia código, conversa, screenshots ou avaliações de outra antes de terminar.
-5. Registrar modelo e versão exata, configuração do agente, limites, início e fim, uso de tokens/custo quando disponível, commit final e eventuais falhas de ferramenta.
+5. Registrar modelo e versão exata, nível de reasoning, configuração do agente, limites, início e fim, uso de tokens/custo quando disponível, commit final e eventuais falhas de ferramenta.
 
 Não conceder recursos de criação de arte ou bibliotecas especiais a apenas um candidato. Se quiser comparar modelos com capacidades diferentes, fazer uma rodada separada e declarar essa diferença.
 
